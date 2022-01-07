@@ -15,7 +15,6 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .systemBlue
 		
 		setContrainsts()
 	}
@@ -26,7 +25,7 @@ extension ViewController{
 	
 	func	setContrainsts(){
 		self.view.addSubview(self.imageBackgrond)
-		
+		self.imageBackgrond.addBlur()
 		
 	}
 }
