@@ -1,3 +1,5 @@
+// https://api.openweathermap.org/data/2.5/weather?q=Kazan&units=metric&appid=b98fb8dd2eba265a6706b69f9274e306
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -12,6 +14,9 @@ class ViewController: UIViewController {
 		image.translatesAutoresizingMaskIntoConstraints = false
 		return image
 	}()
+	
+	let textField: 
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

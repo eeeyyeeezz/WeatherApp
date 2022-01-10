@@ -5,7 +5,7 @@ protocol Bluring {
 }
 
 extension Bluring where Self: UIView {
-    func addBlur(_ alpha: CGFloat = 0.5) {
+	func addBlur(_ alpha: CGFloat = 0.9) {
         // create effect
 		let effect = UIBlurEffect(style: .dark)
         let effectView = UIVisualEffectView(effect: effect)
