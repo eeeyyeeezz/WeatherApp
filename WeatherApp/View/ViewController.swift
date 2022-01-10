@@ -4,6 +4,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	var completionHandler: ((String) -> Void)?
+	
 	let imageBackgrond: UIImageView = {
 		var image = UIImageView()
 		image.image = UIImage(named: "background")
@@ -22,17 +24,17 @@ class ViewController: UIViewController {
 		input.returnKeyType = .done
 		input.autocapitalizationType = .words
 		input.autocorrectionType = .no
-		input.font = input.font?.withSize(15)
+		input.font = UIFont(name: "Helvetica", size: 25)
 		input.translatesAutoresizingMaskIntoConstraints = false
 		return input
 	}()
 	
-	let text: UILabel = {
+	let label: UILabel = {
 		let text = UILabel()
 		text.frame = CGRect(x: 100, y: 200, width: 300, height: 50)
 		text.text = "Enter your city"
 		text.textColor = .white
-		text.font = text.font.withSize(35)
+		text.font = UIFont(name: "Helvetica", size: 35)
 		text.translatesAutoresizingMaskIntoConstraints = false
 		return text
 	}()
@@ -48,13 +50,21 @@ class ViewController: UIViewController {
 		
 }
 
-extension ViewController{
+extension ViewController : UITextFieldDelegate{
 	
 	func	setContrainsts(){
-		self.view.addSubview(self.text)
+		self.view.addSubview(self.label)
+		
 		
 		self.view.addSubview(self.textField)
+		self.textField.delegate = self
 		self.textField.center = self.view.center
+	}
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		if let text = textField.text { print(text) ; self.completionHandler?(text) }
+		return true
 	}
 }
 
