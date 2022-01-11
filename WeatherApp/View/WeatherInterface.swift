@@ -6,6 +6,7 @@ extension ViewWeather {
 		guard let info = self.info else { print("SetWeatherInterface Error") ; return }
 		
 		backgroundImage.image = UIImage(named: "SnowBackground")
+		backgroundImage.addBlur()
 		
 		if info.main.temp < 0 {
 			backgroundImage.image = UIImage(named: "SnowBackground")

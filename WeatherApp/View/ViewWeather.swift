@@ -26,7 +26,7 @@ class ViewWeather: UIViewController {
 	
 	let cityLabel: UILabel = {
 		let text = UILabel()
-		text.textColor = .black
+		text.textColor = .white
 		text.font = text.font.withSize(50)
 		text.translatesAutoresizingMaskIntoConstraints = false
 		return text
@@ -40,7 +40,7 @@ class ViewWeather: UIViewController {
 	
 	let weatherLabel: UILabel = {
 		let text = UILabel()
-		text.textColor = .black
+		text.textColor = .white
 		text.font = UIFont(name: "Helvetica", size: 40)
 		text.translatesAutoresizingMaskIntoConstraints = false
 		return text
@@ -53,7 +53,7 @@ class ViewWeather: UIViewController {
 		completionHandler = { newStruct in
 			DispatchQueue.main.async {
 				self.info = newStruct
-				// City Not Found TOOD
+				// City Not Found TODO
 				
 				self.setWeatherInterface()
 				self.setConstraints()

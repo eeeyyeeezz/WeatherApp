@@ -42,10 +42,10 @@ class ViewController: UIViewController {
 		self.view.backgroundColor = .black
 		navigationController?.navigationBar.isHidden = true
 		
-//		let vw = ViewWeather()
-//		vw.cityString = "Kazan"
-//		navigationController?.pushViewController(vw, animated: true)
-		setContrainsts()
+		let vw = ViewWeather()
+		vw.cityString = "Kazan"
+		navigationController?.pushViewController(vw, animated: true)
+//		setContrainsts()
 	}
 		
 }
@@ -54,6 +54,7 @@ extension ViewController : UITextFieldDelegate{
 	
 	func	setContrainsts(){
 		view.addSubview(cloudsBackground)
+		cloudsBackground.addBlur()
 		view.addSubview(textField)
 		textField.delegate = self
 		NSLayoutConstraint.activate([
