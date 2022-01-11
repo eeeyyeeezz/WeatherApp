@@ -15,6 +15,6 @@ extension ViewWeather {
 			weatherImage.image = UIImage(named: "sun")
 		}
 		
-		weatherLabel.text = "\(info.main.temp))"
+		weatherLabel.text = String(info.main.temp)
 	}
 }
