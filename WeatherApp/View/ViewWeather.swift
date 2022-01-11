@@ -42,6 +42,7 @@ class ViewWeather: UIViewController {
 		let text = UILabel()
 		text.textColor = .black
 		text.font = UIFont(name: "Helvetica", size: 40)
+		text.numberOfLines = 0
 		text.translatesAutoresizingMaskIntoConstraints = false
 		return text
 	}()
