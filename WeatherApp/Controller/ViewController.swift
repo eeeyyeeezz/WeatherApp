@@ -6,8 +6,6 @@ class ViewController: UIViewController {
 
 	var completionHandler: ((String) -> ())?
 	
-	
-	
 	let textField: UITextField = {
 		let input = UITextField()
 		input.backgroundColor = .white
@@ -34,10 +32,10 @@ class ViewController: UIViewController {
 		self.view.backgroundColor = .black
 		navigationController?.navigationBar.isHidden = true
 		
-		let vw = ViewWeather()
-		vw.cityString = "Kazan"
-		navigationController?.pushViewController(vw, animated: true)
-//		setContrainsts()
+//		let vw = ViewWeather()
+//		vw.cityString = "Kazan"
+//		navigationController?.pushViewController(vw, animated: true)
+		setContrainsts()
 	}
 		
 }
@@ -71,6 +69,7 @@ extension ViewController : UITextFieldDelegate{
 			completionHandler?(text)
 			vw.cityString = text
 			navigationController?.pushViewController(vw, animated: true)
+			textField.text = ""
 		}
 		return true
 	}

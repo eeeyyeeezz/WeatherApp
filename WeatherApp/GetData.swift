@@ -10,9 +10,7 @@ extension ViewWeather{
 		let session = URLSession.shared.dataTask(with: url) { data, response, error in
 			if let error = error { print(error) ; return }
             guard let data = data else { print("Data error!") ; return }
-			
-//			let JSONString = String(data: data, encoding: .utf8)
-//			print(JSONString)
+
 			do {
 				let WeatherJSON = try JSONDecoder().decode(WeatherStruct.self, from: data)
 				self.completionHandler?(WeatherJSON)
