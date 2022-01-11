@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 		let vw = ViewWeather()
 		vw.cityString = "Kazan"
 		navigationController?.pushViewController(vw, animated: true)
-//		setContrainsts()
+		setContrainsts()
 	}
 		
 }
