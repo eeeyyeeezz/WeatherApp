@@ -37,4 +37,14 @@ extension ViewWeather {
 		
 		weatherLabel.text = String(info.main.temp) + " °C"
 	}
+	
+	func setCityNotExist(){
+		DispatchQueue.main.async {
+			self.backgroundImage.image = UIImage(named: "NotFoundBackground")
+			
+			self.view.addSubview(self.backgroundImage)
+			self.view.addSubview(self.backButton)
+		}
+	}
+	
 }

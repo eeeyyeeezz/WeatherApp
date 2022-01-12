@@ -1,9 +1,10 @@
 import UIKit
 
+
 class ViewWeather: UIViewController {
 
 	var cityString: String?
-	var completionHandler: ((WeatherStruct) -> ())?
+	var completionHandler: ((WeatherStruct?, Bool) -> ())?
 	var info: WeatherStruct?
 	
 	let backgroundImage: UIImageView = {
@@ -52,14 +53,16 @@ class ViewWeather: UIViewController {
         super.viewDidLoad()
 		
 		getData()
-		completionHandler = { newStruct in
-			DispatchQueue.main.async {
-				self.info = newStruct
-				// City Not Found TODO
-				
-				self.setWeatherInterface()
-				self.setConstraints()
-			}
+		
+		completionHandler = { newStruct, cityExist in
+			print(cityExist)
+			if cityExist{
+				DispatchQueue.main.async {
+					self.info = newStruct
+					self.setWeatherInterface()
+					self.setConstraints()
+				}
+			} else { self.setCityNotExist() }
 		}
 	}
 	
