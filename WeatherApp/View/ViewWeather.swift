@@ -59,7 +59,7 @@ class ViewWeather: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		getData()
+		getWeatherData()
 		completionHandler = { newStruct, cityExist in
 			if cityExist{
 				DispatchQueue.main.async {

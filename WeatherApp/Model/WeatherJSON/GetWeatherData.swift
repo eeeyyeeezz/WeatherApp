@@ -2,7 +2,7 @@ import Foundation
 
 extension ViewWeather{
 	
-	func getData(){
+	func getWeatherData(){
 		guard var cityString = cityString else { print("CityString Error While GetData") ; return }
 		cityString = cityString.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil)
 		let urlString: String = "https://api.openweathermap.org/data/2.5/weather?q=" + cityString + "&units=metric&appid=b98fb8dd2eba265a6706b69f9274e306"

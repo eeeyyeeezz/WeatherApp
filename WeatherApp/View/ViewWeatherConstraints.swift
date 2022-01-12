@@ -11,7 +11,7 @@ extension ViewWeather{
 		cityLabel.text = cityString
 		view.addSubview(cityLabel)
 		NSLayoutConstraint.activate([
-			cityLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
+			cityLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 75),
 			cityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
 		])
 		
