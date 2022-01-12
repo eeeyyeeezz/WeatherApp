@@ -32,12 +32,6 @@ class ViewWeather: UIViewController {
 		return text
 	}()
 	
-	let weatherImage: UIImageView = {
-		let image = UIImageView()
-		image.frame = CGRect(x: 0, y: 0, width: 250, height: 250)
-		return image
-	}()
-	
 	let weatherLabel: UILabel = {
 		let text = UILabel()
 		text.textColor = .black
@@ -46,6 +40,13 @@ class ViewWeather: UIViewController {
 		text.translatesAutoresizingMaskIntoConstraints = false
 		return text
 	}()
+	
+	let weatherImage: UIImageView = {
+		let image = UIImageView()
+		image.frame = CGRect(x: 0, y: 0, width: 250, height: 250)
+		return image
+	}()
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
