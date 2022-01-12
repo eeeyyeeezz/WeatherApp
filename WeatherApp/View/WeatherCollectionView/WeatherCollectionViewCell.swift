@@ -6,9 +6,11 @@ class WeatherCollectionViewCell: UICollectionViewCell {
     
 	static let identifier: String = "WeatherCollectionViewCell"
 	
+	var forecastStruct: ForecastStruct?
+	
 	let image: UIImageView = {
 		let image = UIImageView()
-		image.backgroundColor = .red
+		image.image = UIImage(named: "cloud")
 		image.translatesAutoresizingMaskIntoConstraints = false
 		return image
 	}()
@@ -22,7 +24,6 @@ class WeatherCollectionViewCell: UICollectionViewCell {
 			image.trailingAnchor.constraint(equalTo: trailingAnchor),
 			image.topAnchor.constraint(equalTo: topAnchor),
 			image.bottomAnchor.constraint(equalTo: bottomAnchor)
-		
 		])
 	}
 	

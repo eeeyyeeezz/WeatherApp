@@ -1,8 +1,6 @@
 import UIKit
 
 class WeatherCollectionView: UICollectionView {
-
-	var forecastStruct: ForecastStruct?
 	
 	init(){
 		let layout = UICollectionViewFlowLayout()
