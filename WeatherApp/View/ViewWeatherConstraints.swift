@@ -23,6 +23,12 @@ extension ViewWeather{
 			weatherLabel.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 10),
 			weatherLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
 		])
+		
+		view.addSubview(tempLabel)
+		NSLayoutConstraint.activate([
+			tempLabel.topAnchor.constraint(equalTo: weatherLabel.bottomAnchor, constant: 10),
+			tempLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+		])
 	}
 	
 }

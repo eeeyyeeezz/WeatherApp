@@ -36,8 +36,15 @@ class ViewWeather: UIViewController {
 	let weatherLabel: UILabel = {
 		let text = UILabel()
 		text.textColor = .black
+		text.font = UIFont(name: "Helvetica", size: 45)
+		text.translatesAutoresizingMaskIntoConstraints = false
+		return text
+	}()
+	
+	let tempLabel: UILabel = {
+		let text = UILabel()
+		text.textColor = .black
 		text.font = UIFont(name: "Helvetica", size: 40)
-		text.numberOfLines = 0
 		text.translatesAutoresizingMaskIntoConstraints = false
 		return text
 	}()
@@ -53,9 +60,7 @@ class ViewWeather: UIViewController {
         super.viewDidLoad()
 		
 		getData()
-		
 		completionHandler = { newStruct, cityExist in
-			print(cityExist)
 			if cityExist{
 				DispatchQueue.main.async {
 					self.info = newStruct
