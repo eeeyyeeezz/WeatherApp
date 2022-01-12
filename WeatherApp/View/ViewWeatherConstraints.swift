@@ -29,6 +29,15 @@ extension ViewWeather{
 			tempLabel.topAnchor.constraint(equalTo: weatherLabel.bottomAnchor, constant: 10),
 			tempLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
 		])
+		
+		view.addSubview(weatherCV)
+		NSLayoutConstraint.activate([
+			weatherCV.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -70),
+			weatherCV.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+			weatherCV.heightAnchor.constraint(equalToConstant: 200),
+			weatherCV.widthAnchor.constraint(equalToConstant: 360)
+		
+		])
 	}
 	
 }

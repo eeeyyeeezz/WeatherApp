@@ -1,5 +1,7 @@
 import UIKit
 
+extension UIView: Bluring {}
+
 protocol Bluring {
     func addBlur(_ alpha: CGFloat)
 }
@@ -19,4 +21,3 @@ extension Bluring where Self: UIView {
     }
 }
 
-extension UIView: Bluring {}

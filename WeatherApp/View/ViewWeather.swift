@@ -1,11 +1,11 @@
 import UIKit
 
-
 class ViewWeather: UIViewController {
 
 	var cityString: String?
 	var completionHandler: ((WeatherStruct?, Bool) -> ())?
 	var info: WeatherStruct?
+	var weatherCV = WeatherCollectionView()
 	
 	let backgroundImage: UIImageView = {
 		let image = UIImageView()

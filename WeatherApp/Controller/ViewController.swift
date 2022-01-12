@@ -78,10 +78,12 @@ extension ViewController : UITextFieldDelegate{
 		let vw = ViewWeather()
 		textField.resignFirstResponder()
 		if let text = textField.text {
-			completionHandler?(text)
-			vw.cityString = text
-			navigationController?.pushViewController(vw, animated: true)
-			textField.text = ""
+			if text != ""{
+				completionHandler?(text)
+				vw.cityString = text
+				navigationController?.pushViewController(vw, animated: true)
+				textField.text = ""
+			}
 		}
 		return true
 	}
