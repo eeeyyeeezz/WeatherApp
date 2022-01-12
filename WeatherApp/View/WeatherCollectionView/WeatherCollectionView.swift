@@ -2,13 +2,15 @@ import UIKit
 
 class WeatherCollectionView: UICollectionView {
 
+	var forecastStruct: ForecastStruct?
+	
 	init(){
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .horizontal
 		super.init(frame: .zero, collectionViewLayout: layout)
 		delegate = self
 		dataSource = self
-		backgroundColor = .green
+		backgroundColor = nil
 		register(WeatherCollectionViewCell.self, forCellWithReuseIdentifier: WeatherCollectionViewCell.identifier)
 		translatesAutoresizingMaskIntoConstraints = false
 	}
@@ -19,7 +21,7 @@ class WeatherCollectionView: UICollectionView {
 
 }
 
-extension WeatherCollectionView: UICollectionViewDelegate, UICollectionViewDataSource{
+extension WeatherCollectionView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { 10 }
 	
@@ -27,5 +29,9 @@ extension WeatherCollectionView: UICollectionViewDelegate, UICollectionViewDataS
 		let cell = dequeueReusableCell(withReuseIdentifier: WeatherCollectionViewCell.identifier, for: indexPath)
 		
 		return cell
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: 160, height: 160)
 	}
 }

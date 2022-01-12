@@ -31,10 +31,13 @@ extension ViewWeather{
 		])
 		
 		view.addSubview(weatherCV)
+		weatherCV.layer.borderColor = UIColor.lightGray.cgColor
+		weatherCV.layer.borderWidth = 0.7
+//		weatherCV.layer.cornerRadius = 3.0
 		NSLayoutConstraint.activate([
 			weatherCV.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -70),
 			weatherCV.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-			weatherCV.heightAnchor.constraint(equalToConstant: 200),
+			weatherCV.heightAnchor.constraint(equalToConstant: 180),
 			weatherCV.widthAnchor.constraint(equalToConstant: 360)
 		
 		])

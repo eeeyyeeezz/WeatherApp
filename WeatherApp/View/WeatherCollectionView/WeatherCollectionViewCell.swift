@@ -1,3 +1,5 @@
+// https://api.openweathermap.org/data/2.5/forecast?q=Moscow&units=metric&appid=b98fb8dd2eba265a6706b69f9274e306
+
 import UIKit
 
 class WeatherCollectionViewCell: UICollectionViewCell {
@@ -6,7 +8,8 @@ class WeatherCollectionViewCell: UICollectionViewCell {
 	
 	let image: UIImageView = {
 		let image = UIImageView()
-		
+		image.backgroundColor = .red
+		image.translatesAutoresizingMaskIntoConstraints = false
 		return image
 	}()
 	
