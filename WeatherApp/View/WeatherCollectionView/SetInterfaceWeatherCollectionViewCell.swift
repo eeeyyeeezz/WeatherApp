@@ -12,7 +12,7 @@ extension WeatherCollectionViewCell {
 				let dtTxt = newStruct.list[idCell * 4].dtTxt
 				let time = dtTxt.dropFirst(11).dropLast(3)
 				let date = "\(dtTxt[dtTxt.index(dtTxt.startIndex, offsetBy: 5)])" + "\(dtTxt[dtTxt.index(dtTxt.startIndex, offsetBy: 6)])" + "." + "\(dtTxt[dtTxt.index(dtTxt.startIndex, offsetBy: 8)])" + "\(dtTxt[dtTxt.index(dtTxt.startIndex, offsetBy: 9)])"
-				self.nameLabel.text = temp + "\n" + date + "\n" + time
+				self.nameLabel.text = date + "\n" + time + "\n" + temp
 				self.setImage()
 			}
 		}

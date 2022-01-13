@@ -43,9 +43,9 @@ class ViewController: UIViewController {
 		self.view.backgroundColor = .black
 		navigationController?.navigationBar.isHidden = true
 		
-		let vw = ViewWeather()
-		vw.cityString = "Kazan"
-		navigationController?.pushViewController(vw, animated: true)
+//		let vw = ViewWeather()
+//		vw.cityString = "Kazan"
+//		navigationController?.pushViewController(vw, animated: true)
 		setContrainsts()
 	}
 		
