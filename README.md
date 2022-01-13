@@ -3,7 +3,5 @@
 
 #### __UITextField, CompletionHandler, Collection View, JSON API, URLSession__
 
-**Api (https://openweathermap.org/)**
-
-[**gif**](https://imgur.com/GmeCzFV)
+[**Api**](https://openweathermap.org/) || [**gif**](https://imgur.com/GmeCzFV)
 
