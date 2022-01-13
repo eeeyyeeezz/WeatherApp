@@ -34,7 +34,7 @@ extension ViewWeather{
 		weatherCV.cityString = self.cityString
 		weatherCV.layer.borderColor = UIColor.lightGray.cgColor
 		weatherCV.layer.borderWidth = 0.7
-//		weatherCV.layer.cornerRadius = 3.0
+		weatherCV.layer.cornerRadius = 2.5
 		NSLayoutConstraint.activate([
 			weatherCV.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -70),
 			weatherCV.centerXAnchor.constraint(equalTo: view.centerXAnchor),
