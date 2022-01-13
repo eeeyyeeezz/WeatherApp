@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 		input.returnKeyType = .done
 		input.autocapitalizationType = .words
 		input.autocorrectionType = .no
+		input.layer.cornerRadius = 10
 		input.font = UIFont(name: "Helvetica", size: 40)
 		input.translatesAutoresizingMaskIntoConstraints = false
 		return input

@@ -18,7 +18,6 @@ extension ViewWeather{
 			} catch { print(error) ; self.completionHandler?(nil, false) }
 			
 		}
-		
 		session.resume()
 	}
 		

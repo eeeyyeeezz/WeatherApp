@@ -31,6 +31,7 @@ extension ViewWeather{
 		])
 		
 		view.addSubview(weatherCV)
+		weatherCV.cityString = self.cityString
 		weatherCV.layer.borderColor = UIColor.lightGray.cgColor
 		weatherCV.layer.borderWidth = 0.7
 //		weatherCV.layer.cornerRadius = 3.0
